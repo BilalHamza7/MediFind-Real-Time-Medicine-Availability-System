@@ -12,12 +12,26 @@
           "SelectedChildIndex": -1,
           "Children": [
             {
+<<<<<<< HEAD
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+=======
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Backend.csproj",
+              "DocumentMoniker": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Backend.csproj",
+              "RelativeDocumentMoniker": "Backend.csproj",
+              "ToolTip": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Backend.csproj",
+              "RelativeToolTip": "Backend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-08T08:36:00.862Z",
+              "EditorCaption": ""
+>>>>>>> f523a429efe69590f9f868ee1ea9f7284c43dccc
             }
           ]
         }
