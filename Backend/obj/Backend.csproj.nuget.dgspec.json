@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind – Real-Time Medicine Availability System\\Backend\\Backend.csproj": {}
+    "D:\\Internship\\TODO\\MediFind\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind – Real-Time Medicine Availability System\\Backend\\Backend.csproj": {
+    "D:\\Internship\\TODO\\MediFind\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind – Real-Time Medicine Availability System\\Backend\\Backend.csproj",
+        "projectUniqueName": "D:\\Internship\\TODO\\MediFind\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind – Real-Time Medicine Availability System\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\Shafran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind – Real-Time Medicine Availability System\\Backend\\obj\\",
+        "projectPath": "D:\\Internship\\TODO\\MediFind\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\bilal\\.nuget\\packages\\",
+        "outputPath": "D:\\Internship\\TODO\\MediFind\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Shafran\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\bilal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,6 +70,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.17, 8.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.17, 8.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.17, 8.0.17]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.17, 8.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
