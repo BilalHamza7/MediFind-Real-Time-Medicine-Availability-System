@@ -1,5 +1,9 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "D:\\Internship\\TODO\\MediFind\\Backend\\",
+  "Documents": [],
+=======
   "WorkspaceRootPath": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\",
   "Documents": [
     {
@@ -7,6 +11,7 @@
       "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
+>>>>>>> f523a429efe69590f9f868ee1ea9f7284c43dccc
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,6 +19,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+=======
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -28,6 +44,7 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-07-08T08:36:00.862Z",
               "EditorCaption": ""
+>>>>>>> f523a429efe69590f9f868ee1ea9f7284c43dccc
             }
           ]
         }
