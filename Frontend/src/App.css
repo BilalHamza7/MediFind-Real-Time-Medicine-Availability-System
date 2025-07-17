@@ -5,3 +5,11 @@
 @theme {
     --font-poppins: 'Poppins', 'sans-serif';
 }
+
+.label_style {
+    @apply flex flex-col font-poppins font-medium md:font-normal text-sm  md:text-lg lg:text-xl xl:text-2xl max-w-xs mt-4 md:mt-5 lg:mt-6
+}
+
+.input_style {
+    @apply text-xs md:text-base lg:text-lg font-normal bg-white rounded-sm px-3 h-8 md:h-10 lg:h-12 mt-1 md:mt-2 outline-none border border-[#007AFF]
+}
