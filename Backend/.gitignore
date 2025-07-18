@@ -56,5 +56,5 @@ nunit-*.xml
 .env
 
 # .gitignore
-obj/
+**/obj/
 bin/
