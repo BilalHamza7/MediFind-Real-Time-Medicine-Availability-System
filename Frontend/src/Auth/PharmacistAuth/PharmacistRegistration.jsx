@@ -54,7 +54,7 @@ const PharmacistRegistration = () => {
                     <button className='button_style'>
                         Sign Up
                     </button>
-                    <p className='font-poppins text-xs font-light text-center mt-2'>Already Have An Account? <br className='sm:hidden' /> <span className='underline cursor-pointer' onClick={() => navigate('/pharmacistLogin')}>Log In</span></p>
+                    <p className='font-poppins text-xs font-light text-center mt-2'>Already Have An Account? <br className='sm:hidden' /> <span className='underline cursor-pointer' onClick={() => navigate('/pharmacist/login')}>Log In</span></p>
                 </div>
                 <div className="max-lg:hidden flex items-center">
                     <img src={DocImg} alt="heroImage" className=' object-cover' />

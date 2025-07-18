@@ -30,16 +30,16 @@ const PharmacistLogin = () => {
                         </label>
                         <div className="flex justify-between mt-2 max-w-xs">
                             <label htmlFor="remember" className='flex gap-1 text-xs md:text-sm font-poppins font-light items-center justify-center'>
-                                <input type="checkbox" id='remember' className='w-4 md:w-5 h-4 md:h-5 accent-[#007AFF] focus:outline-none ' />
+                                <input type="checkbox" id='remember' className='w-4 h-4 accent-[#007AFF] focus:outline-none ' />
                                 Remember Me
                             </label>
-                            <p className='underline font-poppins font-light text-xs md:text-sm text-right'>Forgot Password?</p>
+                            <p className='underline font-poppins font-light text-xs md:text-sm text-right cursor-pointer' onClick={() => navigate('/pharmacist/emailVerification')}>Forgot Password?</p>
                         </div>
                     </div>
                     <button className='button_style'>
                         Log In
                     </button>
-                    <p className='font-poppins text-xs font-light text-center mt-2'>Don't Have An Account? <br className='sm:hidden' /> <span className='underline cursor-pointer' onClick={() => navigate('/pharmacistRegistration')}>Create An Account</span></p>
+                    <p className='font-poppins text-xs font-light text-center mt-2'>Don't Have An Account? <br className='sm:hidden' /> <span className='underline cursor-pointer' onClick={() => navigate('/pharmacist/registration')}>Create An Account</span></p>
                 </div>
                 <div className="max-md:hidden">
                     <img src={DocImg1} alt="heroImage" className=' object-cover' />
