@@ -15,5 +15,5 @@
 }
 
 .button_style {
-    @apply bg-blue-600 py-2 w-4/6 rounded-xl text-white font-poppins text-xs sm:text-sm lg:text-base mt-4
+    @apply bg-blue-600 py-2 w-4/6 rounded-xl text-white font-poppins text-xs sm:text-sm lg:text-base mt-4 cursor-pointer
 }
