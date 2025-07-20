@@ -11,6 +11,7 @@ import PharmOtpVerification from './Auth/PharmacistAuth/PharmOtpVerification'
 import PharmEmailVerification from './Auth/PharmacistAuth/PharmEmailVerification'
 
 import Layout from './Auth/Layout'
+import UserEmailVerification from './Auth/UserAuth/UserEmailVerification'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='/pharmacist/resetPassword' element={<PharmResetPassword />} />
           <Route path='/userlogin' element={<Userlogin />} />
           <Route path='/userRegistration' element={<UserRegistration />} />
+          <Route path='/useremailverification' element={<UserEmailVerification />} />
         </Route>
 
         

@@ -26,7 +26,7 @@ const Userlogin = () => {
                 <input type="checkbox" />
                 <span>Remember me</span>
               </label>
-              <a href="#" className="text-primary text-sm">Forgot Password?</a>
+              <a href="/useremailverification" className="text-primary text-sm">Forgot Password?</a>
             </div>
             <div className="flex justify-center mb-8">
               <button
