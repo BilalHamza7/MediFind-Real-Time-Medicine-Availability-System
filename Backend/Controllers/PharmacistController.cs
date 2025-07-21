@@ -1,5 +1,5 @@
+using Backend.Data;
 using Backend.Models;
-using Backend.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers
@@ -8,19 +8,20 @@ namespace Backend.Controllers
     [Route("api/pharmacist")]
     public class PharmacistController : ControllerBase
     {
-        private readonly SupabaseClientService _supabaseService;
+        private readonly SupabaseClientFactory _clientFactory;
 
-        public PharmacistController(SupabaseClientService supabaseService)
+        public PharmacistController(SupabaseClientFactory clientFactory)
         {
-            _supabaseService = supabaseService;
+            _clientFactory = clientFactory;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProducts()
+        public async Task<IActionResult> GetPharmacists()
         {
-            var client = _supabaseService.GetClient();
+            var client = await _clientFactory.GetClientAsync();
+
             var result = await client.From<PharmacistModel>().Get();
-            // This avoids serializing Postgrest metadata like [PrimaryKey]
+
             var data = result.Models.Select(x => new
             {
                 x.Id,

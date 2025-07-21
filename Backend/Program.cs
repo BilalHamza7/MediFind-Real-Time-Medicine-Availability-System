@@ -1,18 +1,23 @@
-using Backend.Services;
+using Backend.Data; 
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Load configuration from appsettings.json
+builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+
+// Register controllers
 builder.Services.AddControllers();
 
-builder.Services.AddSingleton<SupabaseClientService>();
+// Register Supabase client factory as a singleton
+builder.Services.AddSingleton<SupabaseClientFactory>();
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Swagger/OpenAPI setup
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Enable Swagger in development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
