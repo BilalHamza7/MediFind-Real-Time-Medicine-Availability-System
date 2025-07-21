@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
+
 import DocImg1 from '../../assets/DocImg1.png'
 import { useNavigate } from 'react-router-dom';
 
 const PharmacistLogin = () => {
 
     const navigate = useNavigate();
+
+    // const [data, setData] = useState('');
+
+    const getData = async () => {
+        const response = await axios.get('http://localhost:5143/api/pharmacist');
+        // if(response) setData(response.data);
+        console.log("Data from Backend"+response.data[0].fullName);
+    };
 
     return (
         <div className="flex justify-center md:justify-between bg-[#E8F9FF] w-4/5 max-w-2xl mt-14 rounded-md">
@@ -32,7 +42,7 @@ const PharmacistLogin = () => {
                         <p className='underline font-poppins font-light text-xs md:text-sm text-right cursor-pointer' onClick={() => navigate('/pharmacist/emailVerification')}>Forgot Password?</p>
                     </div>
                 </div>
-                <button className='button_style'>
+                <button className='button_style' onClick={() => getData()}>
                     Log In
                 </button>
                 <p className='font-poppins text-xs font-light text-center mt-2'>Don't Have An Account? <br className='sm:hidden' /> <span className='underline cursor-pointer' onClick={() => navigate('/pharmacist/registration')}>Create An Account</span></p>
