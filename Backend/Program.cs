@@ -1,12 +1,12 @@
 using Backend.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
-                      policy  =>
+                      policy =>
                       {
                           policy.WithOrigins("http://localhost:5173");
                       });
@@ -15,11 +15,19 @@ builder.Services.AddCors(options =>
 // Load configuration from appsettings.json
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
-// Register controllers
-builder.Services.AddControllers();
-
 // Register Supabase client factory as a singleton
 builder.Services.AddSingleton<SupabaseClientFactory>();
+
+// CORS configuration
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+        policy.WithOrigins("http://localhost:5173")
+              .AllowAnyMethod()
+              .AllowAnyHeader());
+});
+// Register controllers
+builder.Services.AddControllers();
 
 // Swagger/OpenAPI setup
 builder.Services.AddEndpointsApiExplorer();
@@ -34,7 +42,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(MyAllowSpecificOrigins);
+// Use CORS policy (important: place it before UseAuthorization)
+app.UseCors("AllowReactApp");
 
 app.UseAuthorization();
 

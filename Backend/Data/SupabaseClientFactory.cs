@@ -21,7 +21,7 @@ namespace Backend.Data
 
                 var options = new SupabaseOptions
                 {
-                    AutoConnectRealtime = true
+                    AutoConnectRealtime = true,
                 };
 
                 var client = new Client(url, key, options);
