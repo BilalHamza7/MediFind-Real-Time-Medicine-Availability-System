@@ -1,6 +1,7 @@
 using Backend.Data;
 using Backend.Models;
 using Backend.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers
@@ -10,6 +11,7 @@ namespace Backend.Controllers
     public class PharmacistController : ControllerBase
     {
         private readonly SupabaseClientFactory _clientFactory;
+        private readonly PharmacistService _pharmacistService;
 
         public PharmacistController(SupabaseClientFactory clientFactory)
         {
@@ -19,11 +21,9 @@ namespace Backend.Controllers
         [HttpGet("getAllPharmacists")]
         public async Task<IActionResult> GetPharmacists()
         {
-            var client = await _clientFactory.GetClientAsync();
+            var pharmacists = await _pharmacistService.GetAllAsync();
 
-            var result = await client.From<PharmacistModel>().Get();
-
-            var data = result.Models.Select(x => new
+            var data = pharmacists.Select(x => new
             {
                 x.Id,
                 x.FullName
@@ -33,7 +33,7 @@ namespace Backend.Controllers
         }
 
         [HttpPost("createPharmacist")]
-        public async Task<IActionResult> SaveClientAsync([FromBody] PharmacistModel pharmacist)
+        public async Task<IActionResult> SaveClientAsync([FromBody] Pharmacist pharmacist)
         {
             if (pharmacist == null)
             {
@@ -41,8 +41,7 @@ namespace Backend.Controllers
             }
             try
             {
-                var pharmacistService = new PharmacistService(_clientFactory);
-                await pharmacistService.SaveClientAsync(pharmacist);
+                await _pharmacistService.SaveClientAsync(pharmacist);
                 return Ok("Pharmacist Account Created Successfully.");
             }
             catch (Exception ex)
@@ -51,5 +50,45 @@ namespace Backend.Controllers
                 return StatusCode(500, $"Internal server error: {ex}");
             }
         }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] Pharmacist loginData)
+        {
+            if (loginData == null || string.IsNullOrWhiteSpace(loginData.Email) || string.IsNullOrWhiteSpace(loginData.Password))
+                return BadRequest("Email and Password are required.");
+
+            try
+            {
+                var pharmacists = await _pharmacistService.GetAllAsync();
+                var pharmacist = pharmacists.FirstOrDefault(u => u.Email == loginData.Email);
+
+                if (pharmacist == null || !BCrypt.Net.BCrypt.Verify(loginData.Password, pharmacist.Password))
+                    return Unauthorized("Invalid email or password.");
+
+                var jwtService = new JwtService(HttpContext.RequestServices.GetRequiredService<IConfiguration>());
+                var token = jwtService.GeneratePharmacistToken(pharmacist);
+
+                return Ok(new { token });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Login error: " + ex);
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        // [Authorize]
+        // [HttpGet("me")]
+        // public async Task<IActionResult> GetMyProfile()
+        // {
+        //     var email = User.FindFirst("email")?.Value;
+        //     if (string.IsNullOrEmpty(email)) return Unauthorized();
+
+        //     var pharmacyService = new PharmacistService(_clientFactory);
+        //     var pharmacist = await pharmacyService.GetByEmailAsync(email);
+
+        //     if (pharmacist == null) return NotFound();
+        //     return Ok(pharmacist);
+        // }
     }
 }

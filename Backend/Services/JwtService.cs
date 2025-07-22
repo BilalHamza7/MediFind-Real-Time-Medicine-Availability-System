@@ -40,5 +40,29 @@ namespace Backend.Services
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+        public string GeneratePharmacistToken(Pharmacist pharmacist)
+        {
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, pharmacist.Email),
+                new Claim("id", pharmacist.Id.ToString()),
+                new Claim("full_name", pharmacist.FullName),
+                new Claim("email", pharmacist.Email),
+                new Claim("role", "pharmacist"), // optional
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(Convert.ToDouble(_configuration["Jwt:DurationInMinutes"])),
+                signingCredentials: creds);
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
     }
 }

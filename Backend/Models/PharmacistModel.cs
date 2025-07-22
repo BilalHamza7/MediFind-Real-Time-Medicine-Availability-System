@@ -4,7 +4,7 @@ using Supabase.Postgrest.Models;
 namespace Backend.Models
 {
     [Table("pharmacist")] 
-    public class PharmacistModel : BaseModel
+    public class Pharmacist : BaseModel
     {
         [PrimaryKey("id", false)]
         public int Id { get; set; }
@@ -17,6 +17,15 @@ namespace Backend.Models
 
         [Column("business_name")]
         public string BusinessName { get; set; }
+
+        [Column("registered_no")]
+        public string RegisteredNo { get; set; }
+
+        [Column("located_city")]
+        public string LocatedCity { get; set; }
+
+        [Column("address")]
+        public string Address { get; set; }
 
         [Column("password")]
         public string Password { get; set; }
