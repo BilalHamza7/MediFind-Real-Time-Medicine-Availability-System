@@ -7,24 +7,28 @@
       "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|c:\\users\\shafran\\desktop\\.net\\medifind \u2013 real-time medicine availability\u00A0system\\backend\\data\\supabaseclientfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:data\\supabaseclientfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|c:\\users\\shafran\\desktop\\.net\\medifind \u2013 real-time medicine availability\u00A0system\\backend\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|c:\\users\\shafran\\desktop\\.net\\medifind \u2013 real-time medicine availability\u00A0system\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|c:\\users\\shafran\\desktop\\.net\\medifind \u2013 real-time medicine availability\u00A0system\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|c:\\users\\shafran\\desktop\\.net\\medifind \u2013 real-time medicine availability\u00A0system\\backend\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|c:\\users\\shafran\\desktop\\.net\\medifind \u2013 real-time medicine availability\u00A0system\\backend\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|c:\\users\\shafran\\desktop\\.net\\medifind \u2013 real-time medicine availability\u00A0system\\backend\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|c:\\users\\shafran\\desktop\\.net\\medifind \u2013 real-time medicine availability\u00A0system\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|c:\\users\\shafran\\desktop\\.net\\medifind \u2013 real-time medicine availability\u00A0system\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|c:\\users\\shafran\\desktop\\.net\\medifind \u2013 real-time medicine availability\u00A0system\\backend\\backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C18B1555-7A1E-4829-9AFB-0190C5236B5E}|Backend.csproj|solutionrelative:backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,21 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\appsettings.json*",
-              "RelativeToolTip": "appsettings.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAADfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-21T16:21:43.621Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -59,64 +50,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SupabaseClientFactory.cs",
-              "DocumentMoniker": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Data\\SupabaseClientFactory.cs",
-              "RelativeDocumentMoniker": "Data\\SupabaseClientFactory.cs",
-              "ToolTip": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Data\\SupabaseClientFactory.cs",
-              "RelativeToolTip": "Data\\SupabaseClientFactory.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Services\\JwtService.cs",
+              "RelativeToolTip": "Services\\JwtService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAzwCkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T15:54:57.832Z",
+              "WhenOpened": "2025-07-22T11:06:20.505Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
+              "Title": "Backend",
+              "DocumentMoniker": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Backend.csproj",
+              "RelativeDocumentMoniker": "Backend.csproj",
+              "ToolTip": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Backend.csproj",
+              "RelativeToolTip": "Backend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-22T10:55:44.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\appsettings.json*",
+              "RelativeToolTip": "appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-21T16:21:43.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UserServices.cs",
               "DocumentMoniker": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Services\\UserServices.cs",
               "RelativeDocumentMoniker": "Services\\UserServices.cs",
               "ToolTip": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Services\\UserServices.cs",
               "RelativeToolTip": "Services\\UserServices.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvyEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA4wC0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T10:56:41.13Z"
+              "WhenOpened": "2025-07-21T10:56:41.13Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAuwCYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAswFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T10:55:22.07Z"
+              "WhenOpened": "2025-07-21T10:55:22.07Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "UserModel.cs",
               "DocumentMoniker": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "Models\\UserModel.cs",
               "ToolTip": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Models\\UserModel.cs",
               "RelativeToolTip": "Models\\UserModel.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA0wB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T10:50:08.449Z"
+              "WhenOpened": "2025-07-21T10:50:08.449Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Shafran\\Desktop\\.NET\\MediFind \u2013 Real-Time Medicine Availability\u00A0System\\Backend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAzwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T00:38:13.843Z"
+              "WhenOpened": "2025-07-21T00:38:13.843Z",
+              "EditorCaption": ""
             }
           ]
         }

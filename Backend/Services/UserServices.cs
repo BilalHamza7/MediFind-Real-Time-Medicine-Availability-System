@@ -29,5 +29,18 @@ namespace Backend.Services
             var result = await client.From<User>().Get();
             return result.Models;
         }
+
+        public async Task<User?> GetByEmailAsync(string email)
+        {
+            var client = await _clientFactory.GetClientAsync();
+
+            var response = await client
+                .From<User>()
+                .Where(u => u.email == email)
+                .Get();
+
+            return response.Models.FirstOrDefault();
+        }
+
     }
 }

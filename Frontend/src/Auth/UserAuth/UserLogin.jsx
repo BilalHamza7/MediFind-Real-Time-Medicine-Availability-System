@@ -1,25 +1,54 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 import image from '../../assets/DocImg1.png'
 import googleIcon from '../../assets/google-icon.svg'
+
 const Userlogin = () => {
-  const [docImage, setDocImage] = useState(image);
-  const [googleIconImage, setGoogleIconImage] = useState(googleIcon);
+  const [docImage] = useState(image)
+  const [googleIconImage] = useState(googleIcon)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleLogin = async (e) => {
+    e.preventDefault()
+    try {
+      const response = await axios.post('http://localhost:5143/api/user/login', {
+        email,
+        password,
+      })
+      if (response.data.token) {
+        localStorage.setItem('token', response.data.token);
+        console.log('Login successful:', response.data);
+        alert('Login successful')
+        window.location.href = '/' // Redirect
+      }
+    } catch (error) {
+      alert('Login failed: ' + (error.response?.data || 'Server error'))
+    }
+  }
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background " >
+    <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="bg-card p-8 rounded-xl shadow-lg flex flex-col md:flex-row w-full mx-4 max-w-4xl bg-[#E8F9FF]">
         {/* Form Section */}
-        <div className="w-full md:w-1/2 ">
+        <div className="w-full md:w-1/2">
           <h2 className="text-2xl font-bold mb-6 text-primary p-4">Login</h2>
-          <form>
+          <form onSubmit={handleLogin}>
             <input
               type="email"
               placeholder="Email Address"
-              className="border border-[#007AFF] p-3 w-full rounded-md mb-4  bg-[#FBFBFB] mb-8"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="border border-[#007AFF] p-3 w-full rounded-md mb-4 bg-[#FBFBFB] mb-8"
+              required
             />
             <input
               type="password"
               placeholder="Password"
-              className="border border-[#007AFF] p-3 w-full rounded-md mb-4  bg-[#FBFBFB] mb-8"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="border border-[#007AFF] p-3 w-full rounded-md mb-4 bg-[#FBFBFB] mb-8"
+              required
             />
             <div className="flex items-center justify-between mb-8">
               <label className="flex items-center space-x-2">
@@ -36,10 +65,9 @@ const Userlogin = () => {
                 Login
               </button>
             </div>
-
           </form>
           <div className="my-8">
-            <button className="w-full flex items-center justify-center border  py-2 rounded-md  border-[#007AFF] ">
+            <button className="w-full flex items-center justify-center border py-2 rounded-md border-[#007AFF]">
               <img src={googleIconImage} alt="Google" className="w-5 h-5 mr-2" />
               Sign in with Google
             </button>

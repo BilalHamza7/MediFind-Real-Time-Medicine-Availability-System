@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
+import axios from 'axios'
 
 import Userlogin from './Auth/UserAuth/Userlogin'
 import UserRegistration from './Auth/UserAuth/UserRegistration'
@@ -13,12 +14,16 @@ import PharmEmailVerification from './Auth/PharmacistAuth/PharmEmailVerification
 import Layout from './Auth/Layout'
 import UserEmailVerification from './Auth/UserAuth/UserEmailVerification'
 
-function App() {
+// ✅ Set default token for Axios on initial load
+const token = localStorage.getItem('token');
+if (token) {
+  axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+}
 
+function App() {
   return (
     <Router>
       <Routes>
-        {/* Routes before login with a layout for navbar before login */}
         <Route path='/' element={<Layout />}>
           <Route path='/pharmacist/login' element={<PharmacistLogin />} />
           <Route path='/pharmacist/registration' element={<PharmacistRegistration />} />
@@ -29,11 +34,9 @@ function App() {
           <Route path='/userRegistration' element={<UserRegistration />} />
           <Route path='/useremailverification' element={<UserEmailVerification />} />
         </Route>
-
-        
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
