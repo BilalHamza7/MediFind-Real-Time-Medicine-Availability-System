@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Backend.Data;
 using Backend.Models;
 using Backend.Services;
@@ -6,6 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers
 {
+
+    // for login purpose only, avoids required field errors
+    public class LoginRequest
+    {
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
+
     [ApiController]
     [Route("api/pharmacist")]
     public class PharmacistController : ControllerBase
@@ -13,9 +22,10 @@ namespace Backend.Controllers
         private readonly SupabaseClientFactory _clientFactory;
         private readonly PharmacistService _pharmacistService;
 
-        public PharmacistController(SupabaseClientFactory clientFactory)
+        public PharmacistController(SupabaseClientFactory clientFactory, PharmacistService pharmacistService)
         {
             _clientFactory = clientFactory;
+            _pharmacistService = pharmacistService;
         }
 
         [HttpGet("getAllPharmacists")]
@@ -41,6 +51,7 @@ namespace Backend.Controllers
             }
             try
             {
+                Console.WriteLine($"Pharmacist: FullName={pharmacist.FullName}, Email={pharmacist.Email}, Address={pharmacist.Address}");
                 await _pharmacistService.SaveClientAsync(pharmacist);
                 return Ok("Pharmacist Account Created Successfully.");
             }
@@ -52,28 +63,42 @@ namespace Backend.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] Pharmacist loginData)
+        public async Task<IActionResult> Login([FromBody] LoginRequest loginData)
         {
+            Console.WriteLine(loginData);
             if (loginData == null || string.IsNullOrWhiteSpace(loginData.Email) || string.IsNullOrWhiteSpace(loginData.Password))
                 return BadRequest("Email and Password are required.");
 
             try
             {
-                var pharmacists = await _pharmacistService.GetAllAsync();
-                var pharmacist = pharmacists.FirstOrDefault(u => u.Email == loginData.Email);
+                var pharmacist = await _pharmacistService.GetByEmailAsync(loginData.Email);
+                Console.WriteLine(pharmacist);
 
-                if (pharmacist == null || !BCrypt.Net.BCrypt.Verify(loginData.Password, pharmacist.Password))
-                    return Unauthorized("Invalid email or password.");
+                if (pharmacist == null)
+                {
+                    return Unauthorized(new { status = "NotFound", message = "No account found" });
+                }
+                else if (!BCrypt.Net.BCrypt.Verify(loginData.Password, pharmacist.Password))
+                {
+                    return Unauthorized(new { status = "Invalid", message = "Invalid password" });
+                }
+                else
+                {
+                    var jwtService = new JwtService(HttpContext.RequestServices.GetRequiredService<IConfiguration>());
+                    var token = jwtService.GeneratePharmacistToken(pharmacist);
 
-                var jwtService = new JwtService(HttpContext.RequestServices.GetRequiredService<IConfiguration>());
-                var token = jwtService.GeneratePharmacistToken(pharmacist);
-
-                return Ok(new { token });
+                    return Ok(new
+                    {
+                        status = "success",
+                        message = "Login successful.",
+                        token
+                    });
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Login error: " + ex);
-                return StatusCode(500, "Internal server error");
+                return StatusCode(500, new { status = "error", message = "Internal server error. Please try again later." });
             }
         }
 

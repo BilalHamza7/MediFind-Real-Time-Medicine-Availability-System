@@ -1,4 +1,5 @@
 using Backend.Data;
+using Backend.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -10,6 +11,7 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 
 // Register Supabase client factory as a singleton
 builder.Services.AddSingleton<SupabaseClientFactory>();
+builder.Services.AddScoped<PharmacistService>();
 
 // CORS configuration
 builder.Services.AddCors(options =>

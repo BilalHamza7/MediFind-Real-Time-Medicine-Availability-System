@@ -36,13 +36,12 @@ namespace Backend.Services
         public async Task<Pharmacist?> GetByEmailAsync(string email)
         {
             var client = await _clientFactory.GetClientAsync();
-
-            var response = await client
+            var result = await client
                 .From<Pharmacist>()
-                .Where(u => u.Email == email)
-                .Get();
+                .Where(p => p.Email == email)
+                .Single();
 
-            return response.Models.FirstOrDefault();
+            return result;
         }
     }
 }

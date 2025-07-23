@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
     return (
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center pb-10'>
             <div className="bg-blue-300 w-full px-5 sm:px-10 py-5">
                 <img src="wait" alt="LOGO" />
             </div>
