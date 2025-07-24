@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import logo from '../../src/assets/Logo.png'
+import logo from '../assets/Logo.png'
 const NavBar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const navigate = useNavigate()
 
   useEffect(() => {
-    // Check if token exists in localStorage
     const token = localStorage.getItem('token')
     setIsLoggedIn(!!token)
   }, [])
@@ -14,35 +13,38 @@ const NavBar = () => {
   const handleLogout = () => {
     localStorage.removeItem('token')
     setIsLoggedIn(false)
-    navigate('/userlogin') // redirect to login after logout
+    navigate('/userlogin')
   }
 
   const handleLogin = () => {
     navigate('/userlogin')
   }
 
-  const handleSignUp = () => {
-    navigate('/userRegistration')
+  const handleBeSeller = () => {
+    navigate('/pharmacist/registration') // You can change this path to your actual seller route
   }
 
   return (
     <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
-      <img src={logo} alt="" className='h-10 items-left'  />
-      <h1 className="text-xl font-bold text-blue-600">MediCore</h1>
+      <div className='flex flex-row items-center space-x-4'>
+        <img src={logo} alt="" className='h-10' onClick={()=>navigate('/')} />
+        <h1 className="text-xl font-bold text-blue-600">MediCore</h1>
+      </div>
+      
       <div className="space-x-4">
         {!isLoggedIn ? (
           <>
             <button
               onClick={handleLogin}
-              className="text-blue-600 border border-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition"
+              className="text-blue-600 border border-blue-600 px-4 py-2 w-30 rounded hover:bg-blue-600 hover:text-white transition"
             >
               Login
             </button>
             <button
-              onClick={handleSignUp}
-              className="text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 transition"
+              onClick={handleBeSeller}
+              className="text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-200 hover:text-black w-30 transition"
             >
-              Sign Up
+              Be a Seller
             </button>
           </>
         ) : (
