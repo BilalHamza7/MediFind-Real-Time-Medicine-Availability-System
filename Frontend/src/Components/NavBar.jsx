@@ -30,7 +30,12 @@ const NavBar = () => {
         <img src={logo} alt="" className='h-10' onClick={()=>navigate('/')} />
         <h1 className="text-xl font-bold text-blue-600">MediCore</h1>
       </div>
-      
+      <ul className='flex space-x-9 text-gray-700 font-bold'>
+        <li onClick={()=> navigate ('/')} className='hover:text-blue-600 hover:cursor-pointer transition'>Home</li>
+        <li onClick={() => navigate('/about')} className='hover:text-blue-600 hover:cursor-pointer'>About</li>
+        <li onClick={() => navigate('/contact')} className='hover:text-blue-600 hover:cursor-pointer'>Contact</li>
+        <li onClick={() => navigate('/products')} className='hover:text-blue-600 hover:cursor-pointer'>Buy Medicines</li>
+      </ul>
       <div className="space-x-4">
         {!isLoggedIn ? (
           <>
