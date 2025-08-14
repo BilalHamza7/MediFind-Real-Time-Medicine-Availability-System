@@ -4,6 +4,8 @@ import axios from 'axios'
 
 import Userlogin from './Auth/UserAuth/Userlogin'
 import UserRegistration from './Auth/UserAuth/UserRegistration'
+import UserEmailVerification from './Auth/UserAuth/UserEmailVerification'
+import UserHome from './User/UserHome'
 
 import PharmacistRegistration from './Auth/PharmacistAuth/PharmacistRegistration'
 import PharmacistLogin from './Auth/PharmacistAuth/PharmacistLogin'
@@ -14,7 +16,6 @@ import PharmEmailVerification from './Auth/PharmacistAuth/PharmEmailVerification
 import Layout from './Auth/Layout'
 import UserEmailVerification from './Auth/UserAuth/UserEmailVerification'
 import NavBar from './Components/NavBar'
-import PharmacyHome from './pages/PharmacyHome'
 
 // ✅ Set default token for Axios on initial load
 const token = localStorage.getItem('token');
@@ -27,6 +28,7 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
+
         <Route path='/' element={<Layout />}>
           <Route path='/pharmacist/login' element={<PharmacistLogin />} />
           <Route path='/pharmacist/registration' element={<PharmacistRegistration />} />
@@ -36,7 +38,6 @@ function App() {
           <Route path='/userlogin' element={<Userlogin />} />
           <Route path='/userRegistration' element={<UserRegistration />} />
           <Route path='/useremailverification' element={<UserEmailVerification />} />
-          <Route path='/pharmacist/home' element={<PharmacyHome />} />
         </Route>
       </Routes>
     </Router>
