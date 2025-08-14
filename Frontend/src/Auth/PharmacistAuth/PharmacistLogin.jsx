@@ -47,7 +47,7 @@ const PharmacistLogin = () => {
                 localStorage.setItem('token', token);
                 console.log('Login successful:', message);
                 setErrors({});
-                navigate('/pharmacist/login');
+                navigate('/pharmacist/home');
             }
 
         } catch (error) {
