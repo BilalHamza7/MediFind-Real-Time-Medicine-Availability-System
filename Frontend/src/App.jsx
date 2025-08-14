@@ -14,6 +14,7 @@ import PharmEmailVerification from './Auth/PharmacistAuth/PharmEmailVerification
 import Layout from './Auth/Layout'
 import UserEmailVerification from './Auth/UserAuth/UserEmailVerification'
 import NavBar from './Components/NavBar'
+import PharmacyHome from './pages/PharmacyHome'
 
 // ✅ Set default token for Axios on initial load
 const token = localStorage.getItem('token');
@@ -35,6 +36,7 @@ function App() {
           <Route path='/userlogin' element={<Userlogin />} />
           <Route path='/userRegistration' element={<UserRegistration />} />
           <Route path='/useremailverification' element={<UserEmailVerification />} />
+          <Route path='/pharmacist/home' element={<PharmacyHome />} />
         </Route>
       </Routes>
     </Router>

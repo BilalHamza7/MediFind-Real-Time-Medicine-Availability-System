@@ -28,7 +28,7 @@ const NavBar = () => {
     <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
       <div className='flex flex-row items-center space-x-4'>
         <img src={logo} alt="" className='h-10' onClick={()=>navigate('/')} />
-        <h1 className="text-xl font-bold text-blue-600">MediCore</h1>
+        <h1 className="text-xl font-bold text-blue-600">MediFind</h1>
       </div>
       <ul className='flex space-x-9 text-gray-700 font-bold'>
         <li onClick={()=> navigate ('/')} className='hover:text-blue-600 hover:cursor-pointer transition'>Home</li>
