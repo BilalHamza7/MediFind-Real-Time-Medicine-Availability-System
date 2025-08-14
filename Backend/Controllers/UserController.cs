@@ -50,7 +50,7 @@ namespace Backend.Controllers
 
                 if (user == null || !BCrypt.Net.BCrypt.Verify(loginData.password, user.password))
                     return Unauthorized("Invalid email or password.");
-
+                
                 var jwtService = new JwtService(HttpContext.RequestServices.GetRequiredService<IConfiguration>());
                 var token = jwtService.GenerateToken(user);
 
