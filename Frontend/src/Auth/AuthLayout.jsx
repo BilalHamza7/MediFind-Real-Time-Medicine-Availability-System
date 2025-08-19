@@ -8,10 +8,10 @@ const AuthLayout = () => {
 
     return (
         <div className='flex flex-col items-center'>
-            <div className="flex bg-blue-300 w-full px-6 py-4">
-                <div className="flex items-center gap-4 cursor-pointer" onClick={() => navigate('/home')}>
+            <div className="flex bg-[#C8E0FC] w-full px-6 py-4">
+                <div className="flex items-center gap-3 cursor-default">
                     <img src={logo} alt="" className='h-10' />
-                    <p className="text-xl font-bold text-blue-600">MediCore</p>
+                    <p className="text-3xl font-medium font text-blue-500">MediFind</p>
                 </div>
             </div>
             {/* pages within the parent route, where this pharmacist layout is applied, are opened in the outlet below */}

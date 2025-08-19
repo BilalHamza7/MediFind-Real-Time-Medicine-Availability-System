@@ -13,26 +13,27 @@ const NavBar = () => {
   const handleLogout = () => {
     localStorage.removeItem('token')
     setIsLoggedIn(false)
-    navigate('/auth/userLogin')
+    navigate('/userLogin')
   }
 
   const handleLogin = () => {
-    navigate('/auth/userLogin')
+    navigate('/userLogin')
   }
 
   const handleBeSeller = () => {
-    navigate('/auth/pharmacistRegistration') // You can change this path to your actual seller route
+    navigate('/pharmacist/login') // You can change this path to your actual seller route
   }
 
   return (
     <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
       <div className='flex flex-row items-center space-x-4'>
-        <img src={logo} alt="" className='h-10' onClick={()=>navigate('/')} />
-        <h1 className="text-xl font-bold text-blue-600">MediFind</h1>
-
+        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/home')}>
+          <img src={logo} alt="" className='h-10' />
+          <p className="text-3xl font-medium font text-blue-500">MediFind</p>
+        </div>
       </div>
       <ul className='flex space-x-9 text-gray-700 font-bold'>
-        <li onClick={()=> navigate ('/home')} className='hover:text-blue-600 hover:cursor-pointer transition'>Home</li>
+        <li onClick={() => navigate('/home')} className='hover:text-blue-600 hover:cursor-pointer transition'>Home</li>
         <li onClick={() => navigate('/about')} className='hover:text-blue-600 hover:cursor-pointer'>About</li>
         <li onClick={() => navigate('/contact')} className='hover:text-blue-600 hover:cursor-pointer'>Contact</li>
         <li onClick={() => navigate('/products')} className='hover:text-blue-600 hover:cursor-pointer'>Buy Medicines</li>
