@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import docImage from '../../assets/DocImg3.png'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 const UserRegistration = () => {
   const [formData, setFormData] = useState({
     fullname: '',
@@ -11,6 +12,7 @@ const UserRegistration = () => {
   });
   const [users, setUsers] = useState([]);
   const [errors, setErrors] = useState('');
+  const navigate = useNavigate();
   const handleChange = (e) =>{
     const { name, value } = e.target;
     setFormData({
@@ -49,7 +51,7 @@ const UserRegistration = () => {
       const response = await axios.post('http://localhost:5143/api/user/register', formData);
       if(response.status === 200){
         alert('Registration successful');
-        window.location.reload();
+        navigate('/userlogin');
       }
     }
     catch(error){

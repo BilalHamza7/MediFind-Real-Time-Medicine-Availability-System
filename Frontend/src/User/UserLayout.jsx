@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet, useNavigate } from 'react-router-dom';
 
-import logo from '../assets/Logo.png'
+import logo from '../assets/Logo.png';
 
 const UserLayout = () => {
 
@@ -15,10 +15,10 @@ const UserLayout = () => {
           <h1 className="text-xl font-bold text-blue-600">MediCore</h1>
         </div>
         <ul className='flex space-x-9 text-gray-700 font-bold'>
-          <li onClick={() => navigate('/user/home')} className='hover:text-blue-600 hover:cursor-pointer transition'>Home</li>
-          <li onClick={() => navigate('/user/products')} className='hover:text-blue-600 hover:cursor-pointer transition'>Products</li>
-          <li onClick={() => navigate('/user/about')} className='hover:text-blue-600 hover:cursor-pointer'>About</li>
-          <li onClick={() => navigate('/user/contact')} className='hover:text-blue-600 hover:cursor-pointer'>Contact</li>
+          <li onClick={() => navigate('/user/dashboard')} className='hover:text-blue-600 hover:cursor-pointer transition'>Dashboard</li>
+          <li onClick={() => navigate('/user/shop')} className='hover:text-blue-600 hover:cursor-pointer transition'>Shop</li>
+          <li onClick={() => navigate('/user/myOrders')} className='hover:text-blue-600 hover:cursor-pointer'>My Orders</li>
+          <li onClick={() => navigate('/user/profile')} className='hover:text-blue-600 hover:cursor-pointer'>Profile</li>
         </ul>
       </nav>
 

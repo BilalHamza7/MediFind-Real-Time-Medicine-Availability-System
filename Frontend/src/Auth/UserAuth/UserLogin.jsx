@@ -20,7 +20,7 @@ const Userlogin = () => {
         localStorage.setItem('token', response.data.token);
         console.log('Login successful:', response.data);
         alert('Login successful')
-        window.location.href = '/' // Redirect
+        window.location.href = '/user/dashboard';
       }
     } catch (error) {
       alert('Login failed: ' + (error.response?.data || 'Server error'))

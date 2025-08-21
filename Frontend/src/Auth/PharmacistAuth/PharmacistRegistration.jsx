@@ -95,7 +95,7 @@ const PharmacistRegistration = () => {
     };
 
     return (
-        <div className="flex justify-center lg:justify-between bg-[#E8F9FF] w-4/5 max-w-4xl mt-14 rounded-md">
+        <div className="flex justify-center lg:justify-between bg-[#E8F9FF] w-4/5 max-w-4xl my-14 rounded-md">
             <div className="flex flex-col items-center justify-center px-5 py-5 w-full max-w-lg ">
                 <p className='font-poppins text-center text-2xl md:text-3xl'>
                     Welcome To MediFind!
